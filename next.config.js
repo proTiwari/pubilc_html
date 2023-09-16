@@ -11,23 +11,23 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: process.env.NEXT_PUBLIC_PROTOCOL,
-        hostname: process.env.NEXT_PUBLIC_API_HOSTNAME,
-        port: '3000', // Add a valid port or set it to an empty string if not applicable
-        pathname: '/home/loona/htdocs/public_html',
+        protocol: process.env.NEXT_PUBLIC_PROTOCOL || 'https',
+        hostname: process.env.NEXT_PUBLIC_API_HOSTNAME || 'example.com',
+        port: '',        // Add a valid port or set it to an empty string if not applicable
+        pathname: '/imgs/**', // Add a valid pathname or set it to an empty string if not applicable
       },
       {
-        protocol: process.env.NEXT_PUBLIC_PROTOCOL,
-        hostname: process.env.NEXT_PUBLIC_STORAGE_HOSTNAME,
-        port: '3000', // Add a valid port or set it to an empty string if not applicable
-        pathname: '/home/loona/htdocs/public_html',
+        protocol: process.env.NEXT_PUBLIC_PROTOCOL || 'https',
+        hostname: process.env.NEXT_PUBLIC_STORAGE_HOSTNAME || 'example.com',
+        port: '',        // Add a valid port or set it to an empty string if not applicable
+        pathname: '/imgs/**', // Add a valid pathname or set it to an empty string if not applicable
       },
       {
-        protocol: process.env.NEXT_PUBLIC_PROTOCOL,
+        protocol: process.env.NEXT_PUBLIC_PROTOCOL || 'https',
         hostname: 'demo-api.foodyman.org',
-        port: '3000', // Add a valid port or set it to an empty string if not applicable
-        pathname: '/home/loona/htdocs/public_html',
-      }
+        port: '',        // Add a valid port or set it to an empty string if not applicable
+        pathname: '/imgs/**', // Add a valid pathname or set it to an empty string if not applicable
+      },
     ],
     minimumCacheTTL: 3600,
     dangerouslyAllowSVG: true,
