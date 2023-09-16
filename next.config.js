@@ -13,14 +13,20 @@ const nextConfig = {
       {
         protocol: process.env.NEXT_PUBLIC_PROTOCOL,
         hostname: process.env.NEXT_PUBLIC_API_HOSTNAME,
+        port: '', // Add a valid port or set it to an empty string if not applicable
+        pathname: '',
       },
       {
         protocol: process.env.NEXT_PUBLIC_PROTOCOL,
         hostname: process.env.NEXT_PUBLIC_STORAGE_HOSTNAME,
+        port: '', // Add a valid port or set it to an empty string if not applicable
+        pathname: '',
       },
       {
         protocol: process.env.NEXT_PUBLIC_PROTOCOL,
-        hostname: 'demo-api.foodyman.org'
+        hostname: 'demo-api.foodyman.org',
+        port: '', // Add a valid port or set it to an empty string if not applicable
+        pathname: '',
       }
     ],
     minimumCacheTTL: 3600,
